@@ -1,0 +1,4 @@
+stable-baselines-3 remote:https://github.com/rodrigodelazcano/stable-baselines3.git branch:fix_tests
+stable-baselines-3-contrib remote:https://github.com/rodrigodelazcano/stable-baselines3-contrib.git branch:feat/new-gym-version
+gym remote: https://github.com/pseudo-rnd-thoughts/gym.git  branch:fixed-env-checker
+Gym-Robotics remote:https://github.com/rodrigodelazcano/Gym-Robotics.git branch:mujoco-bindings
