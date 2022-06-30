@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "validate-mujoco-bindings-gym-robotics"
+version = "0.1.0"
+description = "Benchmark for the new version of the Gym Robotics repo with SB3"
+authors = ["Rodrigo Perez-Vicente <r.l.p.v96@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

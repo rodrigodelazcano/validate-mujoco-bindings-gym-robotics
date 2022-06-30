@@ -1,2 +1,9 @@
 *.pyc
 *__pycache__
+videos/
+runs/
+wandb/
+models/
+__pycache__/
+.pytest_cache/
+MUJOCO_LOG.TXT
