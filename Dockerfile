@@ -68,3 +68,4 @@ RUN git clone https://github.com/rodrigodelazcano/Gym-Robotics.git \
 
 RUN pip install wandb
 RUN pip install tensorboard
+RUN python -c "import mujoco_py"
