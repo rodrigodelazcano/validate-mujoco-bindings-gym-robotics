@@ -33,13 +33,16 @@ if __name__ == "__main__":
     with open(f"hyperparam/rl-zoo.yml") as f:
         hyperparams_dict = yaml.safe_load(f)
         if args.env_id in list(hyperparams_dict.keys()):
-            hyperparams = hyperparams_dict[args.env_id]
+            hyperparams = hyperparams_dict[args.env_id].copy()
         else:
             raise ValueError(f"Hyperparameters not found for {args.env_id}")
 
+    env_config = hyperparams_dict[args.env_id]
+    env_config.update({'env_id': args.env_id})
+
     run = wandb.init(
         project="gym_robotics",
-        config=hyperparams_dict,
+        config=env_config,
         sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
         monitor_gym=True,  # auto-upload the videos of agents playing the game
         save_code=True,  # optional
@@ -75,6 +78,7 @@ if __name__ == "__main__":
         total_timesteps=n_timesteps,
         callback=WandbCallback(
             gradient_save_freq=100,
+            model_save_freq=10,
             model_save_path=f"models/{args.env_id}",
             verbose=2,
         ),

@@ -1,7 +1,7 @@
 FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-runtime
 
-COPY . /root/validate-mujoco-bindings-gym-robotics/
-WORKDIR /root/
+COPY . /home/validate-mujoco-bindings-gym-robotics/
+WORKDIR /home/
 
 RUN apt-get update
 RUN apt-get install sudo
