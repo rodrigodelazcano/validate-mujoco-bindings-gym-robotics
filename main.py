@@ -32,7 +32,7 @@ if __name__ == "__main__":
     commands = []
     for seed in range(1, args.num_seeds + 1):
         for env_id in args.env_ids:
-            commands += [" ".join([args.command, "--env-id", env_id, "--seed", str(seed)])]
+            commands += [" ".join([args.command, "--env-id", env_id, "--seed", str(seed)], "&")]
 
     print(commands)
 
