@@ -7,3 +7,4 @@ models/
 __pycache__/
 .pytest_cache/
 MUJOCO_LOG.TXT
+nohup.out
