@@ -1,11 +1,11 @@
 FROM python:3.10
 
 RUN apt-get -y update \
-    && apt-get install -y xvfb\
+    && apt-get install -y xvfb ffmpeg\
     && mkdir /root/.mujoco \
     && cd /root/.mujoco \
     && wget -qO- 'https://github.com/deepmind/mujoco/releases/download/2.2.1/mujoco-2.2.1-linux-x86_64.tar.gz' | tar -xzvf - \
-    && pip install wandb torch=="1.11.0" gym=="0.25.0" tensorboard=="2.8.0" mujoco=="2.2.1"
+    && pip install wandb torch=="1.11.0" gym=="0.25.0" tensorboard=="2.8.0" mujoco=="2.2.1" imageio="2.16.1"
     
 
 ENV LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/root/.mujoco/mujoco-2.2.1/bin"
