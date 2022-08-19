@@ -72,7 +72,7 @@ if __name__ == "__main__":
     n_timesteps = deepcopy(hyperparams["n_timesteps"])
     del hyperparams["n_timesteps"]
 
-    model = TQC(env=env, replay_buffer_class=HerReplayBuffer, verbose=1,  seed=args.seed, device='cuda', tensorboard_log=f"runs/{args.env_id}_{args.seed}", **hyperparams) 
+    model = TQC(env=env, replay_buffer_class=HerReplayBuffer, verbose=1,  seed=args.seed, device='cuda', tensorboard_log=f"runs/{args.env_id}_{args.seed}_1", **hyperparams) 
     # tensorboard_log=f"runs/{run.id}",
     model.learn(
         total_timesteps=n_timesteps,

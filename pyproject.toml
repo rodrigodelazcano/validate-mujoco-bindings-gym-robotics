@@ -6,7 +6,16 @@ authors = ["Rodrigo Perez-Vicente <r.l.p.v96@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+stable-baselines3 = {git="https://github.com/rodrigodelazcano/stable-baselines3.git"}
+sb3-contrib = {git="https://github.com/rodrigodelazcano/stable-baselines3-contrib.git"}
+Gym-Robotics = {git="https://github.com/rodrigodelazcano/Gym-Robotics.git", branch="mujoco-bindings"}
+python = ">=3.7, <=3.10"
+gym = ">=0.25"
+torch = "1.11.0"
+tensorboard = "2.8.0"
+mujoco = "2.2.1"
+wandb = ">=0.13.0"
+
 
 [tool.poetry.dev-dependencies]
 
