@@ -50,7 +50,7 @@ if __name__ == "__main__":
     )
     
     def make_env():
-        env = gym.make(args.env_id)
+        env = gym.make(args.env_id, render_mode = "rgb_array")
 
         env = Monitor(env)  # record stats such as returns
         env = TimeFeatureWrapper(env)

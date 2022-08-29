@@ -63,6 +63,22 @@ FetchPush-v2:
   )"
   policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
 
+HandReach-v2:
+  n_timesteps: !!float 1e6
+  policy: 'MultiInputPolicy'
+  buffer_size: 1000000
+  ent_coef: 'auto'
+  batch_size: 2048
+  gamma: 0.95
+  learning_rate: !!float 1e-3
+  tau: 0.05
+  replay_buffer_kwargs: "dict(
+    online_sampling=True,
+    goal_selection_strategy='future',
+    n_sampled_goal=4,
+  )"
+  policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
+  
 
 FetchSlide-v1:
   n_timesteps: !!float 3e6

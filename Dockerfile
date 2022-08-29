@@ -19,6 +19,7 @@ WORKDIR /usr/local/validate-mujoco-bindings-gym-robotics/
 
 RUN git clone https://github.com/rodrigodelazcano/stable-baselines3.git \
     && cd stable-baselines3 \
+    && git checkout fix_test \
     && pip install -e .
 
 RUN git clone https://github.com/rodrigodelazcano/stable-baselines3-contrib.git \
