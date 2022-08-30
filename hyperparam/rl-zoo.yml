@@ -48,7 +48,7 @@ FetchPush-v1:
   policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
 
 FetchPush-v2:
-  n_timesteps: !!float 1e6
+  n_timesteps: !!float 1005e3
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
   ent_coef: 'auto'

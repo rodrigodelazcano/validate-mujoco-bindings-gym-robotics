@@ -64,7 +64,7 @@ if __name__ == "__main__":
     env = VecNormalize(env, **normalize_kwargs)
     # Get the env_wrapper hyperparam
 
-    env = VecVideoRecorder(env, f"videos/{args.env_id}_{args.seed}", record_video_trigger=lambda x: x % 10000 == 0, video_length=200)
+    env = VecVideoRecorder(env, f"videos/{args.env_id}_{args.seed}", record_video_trigger=lambda x: x % 200000 == 0, video_length=200)
 
     hyperparams["policy_kwargs"] = eval(hyperparams["policy_kwargs"])
     hyperparams["replay_buffer_kwargs"] = eval(hyperparams["replay_buffer_kwargs"])
@@ -77,8 +77,8 @@ if __name__ == "__main__":
     model.learn(
         total_timesteps=n_timesteps,
         callback=WandbCallback(
-            gradient_save_freq=100,
-            model_save_freq=10,
+            gradient_save_freq=200000,
+            model_save_freq=200000,
             model_save_path=f"models/{args.env_id}",
             verbose=2,
         ),
