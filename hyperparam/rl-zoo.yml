@@ -63,7 +63,7 @@ FetchPush-v2:
   )"
   policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
 
-HandReach-v2:
+HandReach-v1:
   n_timesteps: !!float 1e6
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
