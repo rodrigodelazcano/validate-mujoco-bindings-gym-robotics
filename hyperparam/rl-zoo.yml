@@ -79,7 +79,7 @@ HandReach-v1:
   )"
   policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
 
-  HandReach-v0:
+HandReach-v0:
   n_timesteps: !!float 500e3
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
