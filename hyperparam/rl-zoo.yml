@@ -225,7 +225,7 @@ HandManipulateEggRotateTouchSensors-v0:
   )"
   policy_kwargs: "dict(net_arch=[512, 512, 512], n_critics=2)"
 
-  HandManipulateEggRotateTouchSensors-v2:
+HandManipulateEggRotateTouchSensors-v2:
   n_timesteps: !!float 1001e4
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
