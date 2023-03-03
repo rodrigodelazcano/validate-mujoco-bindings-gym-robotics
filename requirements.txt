@@ -1,0 +1,5 @@
+gym-robotics @ git+https://github.com/rodrigodelazcano/Gymnasium-Robotics.git@mujoco-bindings
+gym == 0.25.0
+stable-baselines3 @ git+https://github.com/rodrigodelazcano/stable-baselines3.git@fix_tests
+sb3-contrib @ git+https://github.com/rodrigodelazcano/stable-baselines3-contrib.git@feat/new-gym-version
+wandb >=0.13.0

@@ -1,5 +1,5 @@
 # === HER Robotics GoalEnvs ===
-FetchReach-v3:
+FetchReach-v2:
   n_timesteps: !!float 20000
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
